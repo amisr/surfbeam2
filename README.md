@@ -13,7 +13,7 @@ from the root directory of the repository.
 
 There are 2 ways to use this package,
 1) from a python shell, or
-2) from the command line.
+2) from the command line (2 commands).
 
 #### Python Shell ####
 
@@ -50,3 +50,7 @@ modify the `timeout` and `retrytime`:
       -r RETRYTIME, --retrytime RETRYTIME
                             Retry timeout. Time to wait between retries.
 
+
+There is another tool, `modemview` that is also available. Usage is the same
+as for `pollsurfbeam2`, however the results are displayed in a curses display
+and updated every ~5 seconds.

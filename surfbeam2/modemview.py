@@ -15,6 +15,7 @@ import re
 import os
 import sys
 import curses
+import curses.ascii
 from argparse import ArgumentParser
 
 from surfbeam2 import PollSurfBeam2

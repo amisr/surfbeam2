@@ -35,6 +35,7 @@ class PollSurfBeam2():
         self.status['tria'] = dict()
         self.timeout = timeout
         self.retrytime = retrytime
+        self.address = address
 
 
     # poll the modem for modem and tria status then parse the raw response
@@ -92,7 +93,9 @@ class PollSurfBeam2():
         params = temp.split("##")
 
         self.status['modem']['ipAddr'] = params[0]
+        self.status['modem']['macAddr'] = params[1]
         self.status['modem']['swVer'] = params[2]
+        self.status['modem']['hwVer'] = params[3]
         self.status['modem']['utStatus'] = params[4]
         self.status['modem']['txPkts'] = params[5]
         self.status['modem']['txBytes'] = params[6]
@@ -101,6 +104,7 @@ class PollSurfBeam2():
         self.status['modem']['uptime'] = params[9]
         self.status['modem']['losCount'] = params[10]
         self.status['modem']['esNo'] = params[11]
+        self.status['modem']['utSerialNum'] = params[13]
         self.status['modem']['rxPower'] = params[14]
         self.status['modem']['oduCblr'] = params[16]
         self.status['modem']['oduTelemetry'] = params[18]
